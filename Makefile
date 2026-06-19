@@ -29,6 +29,10 @@ help:
 	@echo "  $(CYAN)make log$(NC)                  Show recent commits"
 	@echo "  $(CYAN)make release$(NC)              Create a release build"
 	@echo ""
+	@echo "$(GREEN)GitHub Pages Deployment:$(NC)"
+	@echo "  $(CYAN)make deploy-gh-pages$(NC)      Deploy to GitHub Pages"
+	@echo "  $(CYAN)make deploy-gh-pages-manual$(NC) Build for GitHub Pages"
+	@echo ""
 	@echo "$(GREEN)Information:$(NC)"
 	@echo "  $(CYAN)make help$(NC)                 Show this help message"
 	@echo "  $(CYAN)make info$(NC)                 Show project information"
@@ -146,6 +150,25 @@ build-analyze: build
 	@echo ""
 	@echo "$(CYAN)Build artifacts:$(NC)"
 	@find dist -type f -exec ls -lh {} + | awk '{print "  " $$9 ": " $$5}' | sort -k3 -hr
+
+# GitHub Pages deployment
+deploy-gh-pages:
+	@echo "$(CYAN)Building for GitHub Pages...$(NC)"
+	@GITHUB_PAGES=true npm run build
+	@echo "$(GREEN)✓ Build complete$(NC)"
+	@echo ""
+	@echo "$(CYAN)Deploying to GitHub Pages...$(NC)"
+	@npm run deploy
+	@echo "$(GREEN)✓ Deployment complete!$(NC)"
+	@echo "$(YELLOW)Your site is available at:$(NC)"
+	@echo "  https://thinh-wee.github.io/w18i.claude-design.lab"
+
+deploy-gh-pages-manual: build
+	@echo "$(CYAN)Building for GitHub Pages (manual mode)...$(NC)"
+	@GITHUB_PAGES=true npm run build
+	@echo "$(GREEN)✓ Ready to deploy$(NC)"
+	@echo "$(YELLOW)Next step: Commit and push to main branch$(NC)"
+	@echo "$(YELLOW)GitHub Actions will automatically deploy$(NC)"
 
 # Watch mode (if needed)
 watch:

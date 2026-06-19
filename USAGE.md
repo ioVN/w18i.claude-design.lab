@@ -329,9 +329,54 @@ make build
    - `index.html` - Main HTML file
    - `assets/` - Bundled JS and CSS
 
+### GitHub Pages Deployment (Recommended)
+
+#### Automatic Deployment (via GitHub Actions)
+
+```bash
+# Just commit and push to main
+git add .
+git commit -m "Your message"
+git push origin main
+
+# GitHub Actions automatically:
+# 1. Runs type checks
+# 2. Builds for GitHub Pages
+# 3. Deploys to your GitHub Pages site
+# 4. Comments on PRs with status
+```
+
+**Site URL:**
+```
+https://thinh-wee.github.io/w18i.claude-design.lab
+```
+
+#### Manual Deployment
+
+```bash
+# Build and deploy directly
+make deploy-gh-pages
+
+# Or build only (for GitHub Actions):
+make deploy-gh-pages-manual
+```
+
+**Requirements:**
+- Repository is public
+- `gh-pages` package installed (included)
+- GitHub Pages enabled in Settings
+
+**For detailed setup instructions, see: [DEPLOY_GITHUB_PAGES.md](./DEPLOY_GITHUB_PAGES.md)**
+
 ### Deployment Options
 
-#### Static Hosting (Vercel, Netlify, GitHub Pages)
+#### GitHub Pages (Recommended)
+```bash
+make deploy-gh-pages
+# Automatic via GitHub Actions on push to main
+```
+
+#### Static Hosting (Vercel, Netlify)
 ```bash
 make build
 # Upload dist/ directory
