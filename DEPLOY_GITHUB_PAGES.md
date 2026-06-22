@@ -41,7 +41,7 @@ The project includes GitHub Actions for automatic deployment on every push to `m
 Now any push to `main` branch will:
 1. ✅ Run type checks
 2. ✅ Build optimized bundle
-3. ✅ Deploy to `https://thinh-wee.github.io/w18i.claude-design.lab`
+3. ✅ Deploy to `https://iovn.github.io/w18i.claude-design.lab`
 
 ### Option 2: Manual Deployment
 
@@ -78,7 +78,7 @@ base: process.env.GITHUB_PAGES ? '/w18i.claude-design.lab/' : '/'
 
 ```json
 {
-  "homepage": "https://thinh-wee.github.io/w18i.claude-design.lab",
+  "homepage": "https://iovn.github.io/w18i.claude-design.lab",
   "scripts": {
     "build:gh-pages": "GITHUB_PAGES=true npm run build",
     "deploy": "npm run build:gh-pages && gh-pages -d dist"
@@ -107,7 +107,7 @@ base: process.env.GITHUB_PAGES ? '/w18i.claude-design.lab/' : '/'
 After deployment, your application will be available at:
 
 ```
-https://thinh-wee.github.io/w18i.claude-design.lab
+https://iovn.github.io/w18i.claude-design.lab
 ```
 
 ---
@@ -213,7 +213,7 @@ After deployment, your repository will have:
 - [ ] `package.json` includes build:gh-pages and deploy scripts
 - [ ] Committed and pushed changes to main branch
 - [ ] GitHub Actions workflow completed successfully
-- [ ] Site accessible at `https://thinh-wee.github.io/w18i.claude-design.lab`
+- [ ] Site accessible at `https://iovn.github.io/w18i.claude-design.lab`
 
 ---
 
@@ -291,7 +291,7 @@ cname: your-custom-domain.com
 
 2. Add DNS CNAME record pointing to:
 ```
-thinh-wee.github.io
+iovn.github.io
 ```
 
 ---
@@ -421,7 +421,7 @@ Your application is now configured for GitHub Pages deployment:
 
 **Your site is available at:**
 ```
-https://thinh-wee.github.io/w18i.claude-design.lab
+https://iovn.github.io/w18i.claude-design.lab
 ```
 
 ---

@@ -348,7 +348,7 @@ git push origin main
 
 **Site URL:**
 ```
-https://thinh-wee.github.io/w18i.claude-design.lab
+https://iovn.github.io/w18i.claude-design.lab
 ```
 
 #### Manual Deployment

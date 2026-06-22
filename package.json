@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Bankaool Conversation Monitoring System",
   "type": "module",
-  "homepage": "https://thinh-wee.github.io/w18i.claude-design.lab",
+  "homepage": "https://iovn.github.io/w18i.claude-design.lab",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

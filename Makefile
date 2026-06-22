@@ -161,7 +161,7 @@ deploy-gh-pages:
 	@npm run deploy
 	@echo "$(GREEN)✓ Deployment complete!$(NC)"
 	@echo "$(YELLOW)Your site is available at:$(NC)"
-	@echo "  https://thinh-wee.github.io/w18i.claude-design.lab"
+	@echo "  https://iovn.github.io/w18i.claude-design.lab"
 
 deploy-gh-pages-manual: build
 	@echo "$(CYAN)Building for GitHub Pages (manual mode)...$(NC)"
